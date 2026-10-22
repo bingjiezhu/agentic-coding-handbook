@@ -1,0 +1,16 @@
+\lesson{structure}{Connect Project Files and Responsibilities}
+\diagram{p_files}
+Files preserve requirements beyond the chat. A trailing / in the diagram means a folder; \texttt{.md} is readable Markdown text. \texttt{README.md} explains how to run and check the project. \texttt{AGENTS.md} is a rules format supported by agents such as Codex. Direct loading in Claude Code depends on version and configuration; \texttt{CLAUDE.md} can also import it with \texttt{@AGENTS.md}. \texttt{.specify/} stores project principles and workflow support; feature requirements belong in the active feature directory.
+\begin{tabularx}{\linewidth}{@{}L{38mm}Y@{}}
+\toprule File & Questions it answers\\\midrule
+\texttt{spec.md} & What to build, what to exclude and what counts as done; preserve original wording or a traceable link\\
+\texttt{research.md} & What was investigated, sources, alternatives, rationale and remaining unknowns; link experiment records\\
+\texttt{plan.md} / \texttt{tasks.md} & Implementation approach; ordered tasks, status and checks\\
+\texttt{PROGRESS.md} & Actual progress across sessions, unfinished work and where to resume\\
+Verification records & What ran, against which version, results and failure evidence\\
+\bottomrule\end{tabularx}
+\begin{prompt}{Organize Project Files and Reading Entry Points}
+Project: [path]. Task: [goal]. Documents you may update: [scope]. Locate the existing rules, requirements, research, plan, tasks, progress and evidence. Add files only when missing and useful. Use the active Spec Kit feature directory rather than creating parallel copies. Report unreadable paths; return a draft if you cannot write.\par
+Keep rules limited to project-specific conventions, edit scope, check commands and document pointers. Use a short index linking research and experiments to their originals. Preserve valid content; do not move or delete originals. List updated paths and when to maintain them. Refresh rules as the tool requires and check their loaded sources; if loading is not observable, mark it unverified. Creating a file does not prove it is active.
+\end{prompt}
+\textbf{Use an index to find information; keep originals as evidence.} Context compaction itself does not rewrite project files on disk. Save key information beforehand and make it accessible in later sessions. A file's existence does not mean the agent has read it. On resuming, reread the current spec, progress and relevant evidence. Update plans and tasks when requirements change, then record results. Small tasks can share one short record.

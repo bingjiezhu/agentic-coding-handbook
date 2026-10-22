@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="244" viewBox="0 0 1200 244" role="img" aria-labelledby="p_route-title p_route-desc">
+<title id="p_route-title">从目标到可用结果</title><desc id="p_route-desc">从目标到可用结果：说清目标、读懂项目、小步实现、实际检查、交接与复用。</desc>
+<style>text{font-family:"Noto Sans CJK SC","PingFang SC",sans-serif}.number{font-family:"Menlo",monospace}</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7.5" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6Z" fill="#6E675F"/></marker><marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7.5" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6Z" fill="#B4532A"/></marker><marker id="arrow-link" markerWidth="8" markerHeight="6" refX="7.5" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6Z" fill="#6E675F"/></marker></defs>
+<rect width="1200" height="244" fill="#F3EDE3"/>
+<path data-edge="n0-n1" d="M 232,100 L 260,100" fill="none" stroke="#6E675F" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path data-edge="n1-n2" d="M 468,100 L 496,100" fill="none" stroke="#6E675F" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path data-edge="n2-n3" d="M 704,100 L 732,100" fill="none" stroke="#6E675F" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path data-edge="n3-n4" d="M 940,100 L 968,100" fill="none" stroke="#6E675F" stroke-width="2.2" marker-end="url(#arrow)"/>
+<g data-node-group="n0" data-x="24" data-y="48" data-w="208" data-h="104">
+<rect x="24" y="48" width="208" height="104" rx="6" fill="#EAE2D5" stroke="#CBC1B2" stroke-width="1.5"/>
+<text x="128" y="96" fill="#1C1B19" font-size="28" font-weight="500" text-anchor="middle" class="" data-node="n0">说清目标</text>
+<text x="128" y="134" fill="#6E675F" font-size="24" font-weight="400" text-anchor="middle" class="" data-node="n0">范围·完成标准</text>
+<text x="36" y="33" fill="#6E675F" font-size="24" font-weight="400" text-anchor="start" class="number">01</text>
+</g>
+<g data-node-group="n1" data-x="260" data-y="48" data-w="208" data-h="104">
+<rect x="260" y="48" width="208" height="104" rx="6" fill="#F3EDE3" stroke="#CBC1B2" stroke-width="1.5"/>
+<text x="364" y="96" fill="#1C1B19" font-size="28" font-weight="500" text-anchor="middle" class="" data-node="n1">读懂项目</text>
+<text x="364" y="134" fill="#6E675F" font-size="24" font-weight="400" text-anchor="middle" class="" data-node="n1">文件·已有能力</text>
+<text x="272" y="33" fill="#6E675F" font-size="24" font-weight="400" text-anchor="start" class="number">02</text>
+</g>
+<g data-node-group="n2" data-x="496" data-y="48" data-w="208" data-h="104">
+<rect x="496" y="48" width="208" height="104" rx="6" fill="#E9D3C4" stroke="#B4532A" stroke-width="2"/>
+<text x="600" y="96" fill="#B4532A" font-size="28" font-weight="500" text-anchor="middle" class="" data-node="n2">小步实现</text>
+<text x="600" y="134" fill="#6E675F" font-size="24" font-weight="400" text-anchor="middle" class="" data-node="n2">接通真实操作</text>
+<text x="508" y="33" fill="#6E675F" font-size="24" font-weight="400" text-anchor="start" class="number">03</text>
+</g>
+<g data-node-group="n3" data-x="732" data-y="48" data-w="208" data-h="104">
+<rect x="732" y="48" width="208" height="104" rx="6" fill="#F3EDE3" stroke="#CBC1B2" stroke-width="1.5"/>
+<text x="836" y="96" fill="#1C1B19" font-size="28" font-weight="500" text-anchor="middle" class="" data-node="n3">实际检查</text>
+<text x="836" y="134" fill="#6E675F" font-size="24" font-weight="400" text-anchor="middle" class="" data-node="n3">操作·记录·错误</text>
+<text x="744" y="33" fill="#6E675F" font-size="24" font-weight="400" text-anchor="start" class="number">04</text>
+</g>
+<g data-node-group="n4" data-x="968" data-y="48" data-w="208" data-h="104">
+<rect x="968" y="48" width="208" height="104" rx="6" fill="#F3EDE3" stroke="#1C1B19" stroke-width="1.5"/>
+<text x="1072" y="96" fill="#1C1B19" font-size="28" font-weight="500" text-anchor="middle" class="" data-node="n4">交接与复用</text>
+<text x="1072" y="134" fill="#6E675F" font-size="24" font-weight="400" text-anchor="middle" class="" data-node="n4">进度·规则·技能</text>
+<text x="980" y="33" fill="#6E675F" font-size="24" font-weight="400" text-anchor="start" class="number">05</text>
+</g>
+<text x="600" y="222" fill="#6E675F" font-size="24" font-weight="400" text-anchor="middle" class="">独立工作可并行；发现问题后回到对应步骤修正</text>
+</svg>

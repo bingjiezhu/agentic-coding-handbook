@@ -1,0 +1,23 @@
+\lesson{speckit}{Connect Specs and Execution with Spec Kit}
+\diagram{p_speckit}
+A spec describes requirements. \href{https://github.com/github/spec-kit}{Spec Kit} is an optional open-source tool for organizing specs, plans and tasks. Understand the method before adopting the tool; a short note can be enough for a small change.
+\topic{Steps and files: check your installed version}
+\begin{tabularx}{\linewidth}{@{}L{39mm}Y@{}}
+\toprule Step & Purpose and what to check\\\midrule
+\texttt{constitution} & Set principles in \texttt{.specify/memory/constitution.md}\\
+\texttt{specify / clarify} & Define requirements, resolve ambiguity and maintain \texttt{spec.md}\\
+\texttt{plan} & Record research in \texttt{research.md} and the approach in \texttt{plan.md}\\
+\texttt{checklist} & Check requirements quality as needed; passing is not implementation\\
+\texttt{tasks / analyze} & Create \texttt{tasks.md}; check consistency with requirements and plans\\
+\texttt{implement} & Execute tasks, run checks and keep results\\
+\texttt{converge} & Find omissions and add remaining work; still verify actual behavior\\
+\bottomrule\end{tabularx}
+\texttt{plan} also produces \texttt{data-model.md} (data structure) and \texttt{quickstart.md} (validation steps), with \texttt{contracts/} for external interfaces where applicable.
+
+Current default skill invocation: Codex uses \texttt{\$speckit-specify}; Claude Code and Copilot use \texttt{/speckit-specify}. The active feature is selected by \texttt{.specify/feature.json} or runtime settings, not automatically by switching Git branches.
+\begin{prompt}{Advance the Current Feature with Spec Kit}
+Project: [path]. Basis: [requirements and records]. Step for this round: [step]. Allowed edits: [scope]. Check the installed version, invocation, active feature and prerequisites. If installation or inputs are missing, propose how to supply them; do not install or skip ahead on your own.\par
+Preserve existing files. Clarify ambiguity and investigate unknowns. Include required automated tests in the spec and tasks; map each task to requirements and checks.\par
+If only the user can invoke the step, provide the command and wait for its result. Report actual outputs, checks, conflicts and the next step. Do not claim an uninvoked step ran. Surface contradictory requirements rather than choosing silently.
+\end{prompt}
+When unsure, have AI check the official instructions and actual invocation. People review goals and acceptance; AI implements tasks. Update the plan and checks when requirements change so new prompts do not overwrite prior agreements. Complete documentation does not prove a finished feature.

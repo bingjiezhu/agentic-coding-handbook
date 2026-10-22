@@ -1,0 +1,148 @@
+% ---------------------------------------------------------------
+% Shared style for "Vibe Coding in Practice" / "Vibe Coding 实战"
+% Compile with XeLaTeX (latexmk -xelatex main.tex)
+% ---------------------------------------------------------------
+\usepackage[a4paper,top=24mm,bottom=26mm,left=24mm,right=24mm,headheight=14pt]{geometry}
+\usepackage{fontspec}
+\IfFontExistsTF{Charter}{\setmainfont{Charter}}{\setmainfont{TeX Gyre Schola}}
+\IfFontExistsTF{Avenir Next}{
+\setsansfont{Avenir Next}[UprightFont=* Regular,BoldFont=* Demi Bold,ItalicFont=* Italic,BoldItalicFont=* Demi Bold Italic]
+\newfontfamily\displayfont{Avenir Next}[UprightFont=* Medium,BoldFont=* Demi Bold,Ligatures=TeX]
+}{
+\setsansfont{TeX Gyre Heros}
+\newfontfamily\displayfont{TeX Gyre Heros}[Ligatures=TeX]
+}
+\IfFontExistsTF{Menlo}{\setmonofont{Menlo}[Scale=.82]}{\setmonofont{DejaVu Sans Mono}[Scale=.82]}
+
+\usepackage{xcolor}
+\usepackage{colortbl}
+\definecolor{paper}{HTML}{F3EDE3}
+\definecolor{ink}{HTML}{1C1B19}
+\definecolor{accent}{HTML}{B4532A}
+\definecolor{accentsoft}{HTML}{E9D3C4}
+\definecolor{muted}{HTML}{6E675F}
+\definecolor{rule}{HTML}{CBC1B2}
+\definecolor{card}{HTML}{EAE2D5}
+\definecolor{cardline}{HTML}{D6CBBB}
+\definecolor{olive}{HTML}{5E6B4E}
+\definecolor{ochre}{HTML}{B08A3E}
+\pagecolor{paper}
+\color{ink}
+
+\usepackage{graphicx}
+\usepackage{microtype}
+\usepackage{needspace}
+\usepackage{booktabs,tabularx,array,multirow,xltabular}
+\usepackage{enumitem}
+\setlist{itemsep=2pt,topsep=4pt,parsep=0pt,leftmargin=*}
+\setlist[itemize]{label={\color{accent}\textbullet}}
+\usepackage{amsmath,amssymb}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,shapes.geometric,shapes.misc,fit,backgrounds,decorations.pathreplacing}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage[most]{tcolorbox}
+\usepackage{listings}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{colorlinks=true,linkcolor=accent,urlcolor=accent,citecolor=accent,
+  pdftitle={Vibe Coding in Practice},pdfauthor={Bingjie Zhu}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\linespread{1.08}
+
+% ---------- Headings ----------
+\titleformat{\section}[display]
+  {\sffamily\color{ink}}
+  {\color{accent}\small\bfseries\sectionlabel}
+  {2pt}
+  {\displayfont\fontsize{23}{27}\selectfont\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000}
+  [\vspace{3pt}{\color{rule}\titlerule[0.6pt]}]
+\titlespacing*{\section}{0pt}{0pt}{8pt}
+\titleformat{name=\section,numberless}[display]
+  {\sffamily\color{ink}}{}{0pt}
+  {\displayfont\fontsize{23}{27}\selectfont\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000}
+  [\vspace{3pt}{\color{rule}\titlerule[0.6pt]}]
+\titleformat{\subsection}
+  {\sffamily\bfseries\large\color{ink}}{\color{accent}\thesubsection}{0.7em}{}
+\titlespacing*{\subsection}{0pt}{10pt}{3pt}
+\titleformat{\subsubsection}
+  {\sffamily\bfseries\normalsize\color{accent}}{}{0em}{}
+\titlespacing*{\subsubsection}{0pt}{10pt}{2pt}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+
+% ---------- Header / footer ----------
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[L]{\sffamily\scriptsize\color{muted}\MakeUppercase{Vibe Coding in Practice}}
+\fancyhead[R]{\sffamily\scriptsize\color{muted}\leftmark}
+\fancyfoot[C]{\sffamily\scriptsize\color{muted}\thepage}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[C]{\sffamily\scriptsize\color{muted}\thepage}}
+
+% ---------- Small helpers ----------
+\newcommand{\kicker}[1]{{\sffamily\small\bfseries\color{accent}\MakeUppercase{#1}}}
+\newcommand{\lede}[1]{{\fontsize{12}{17.5}\selectfont #1\par}}
+\newcommand{\term}[1]{\textbf{#1}}
+\newcommand{\cmd}[1]{\texttt{\color{accent!80!ink}#1}}
+\newcommand{\src}[1]{{\footnotesize\color{muted}[#1]}}
+
+\newcommand{\moduleopen}[2]{%
+  \noindent\begin{minipage}[c]{0.64\linewidth}\lede{#2}\end{minipage}\hfill
+  \begin{minipage}[c]{0.32\linewidth}\includegraphics[width=\linewidth]{figures/#1}\end{minipage}\par\vspace{2pt}}
+\newcommand{\keyideaname}{Note}
+\newcommand{\logsname}{From my projects}
+\newcommand{\modulename}{Chapter}
+\newcommand{\sectionlabel}{\MakeUppercase{\modulename}~\thesection}
+\tcbset{
+  base/.style={enhanced,breakable,boxrule=0pt,arc=2pt,left=10pt,right=10pt,top=7pt,bottom=7pt,
+    fonttitle=\sffamily\bfseries\small,coltitle=ink,before skip=8pt,after skip=10pt},
+  tight/.style={before skip=4pt,after skip=6pt,top=5pt,bottom=5pt},
+}
+\newtcolorbox{keyidea}[1][\keyideaname]{base,unbreakable,colback=card,
+  borderline west={2.4pt}{0pt}{accent},title={\color{accent}\MakeUppercase{#1}},
+  attach title to upper,after title={\par\smallskip}}
+\newtcolorbox{logs}[1][\logsname]{base,unbreakable,colback=accentsoft!45!paper,
+  borderline west={2.4pt}{0pt}{ink},title={\MakeUppercase{#1}},attach title to upper,
+  after title={\par\smallskip},fontupper=\small}
+% Question / exercise box inside a chapter; the explanation follows as normal text.
+\newtcolorbox{interact}[1]{base,unbreakable,colback=accentsoft!50!paper,colframe=accent,boxrule=0pt,
+  borderline={0.9pt}{0pt}{accent,dash pattern=on 3pt off 2pt},
+  title={\color{accent}#1},attach title to upper,after title={\par\smallskip}}
+\newtcolorbox{promptbox}[1]{base,unbreakable,tight,colback=card,colframe=cardline,boxrule=0.5pt,
+  title={\MakeUppercase{#1}},attach title to upper,after title={\par\smallskip},
+  fontupper=\ttfamily\footnotesize}
+
+% ---------- Code listings ----------
+\lstdefinestyle{course}{
+  basicstyle=\ttfamily\footnotesize\color{ink},
+  backgroundcolor=\color{card},
+  frame=single,framerule=0pt,framesep=6pt,xleftmargin=6pt,xrightmargin=6pt,
+  commentstyle=\color{muted}\itshape,
+  keywordstyle=\color{accent},
+  stringstyle=\color{olive},
+  showstringspaces=false,breaklines=true,columns=fullflexible,keepspaces=true,
+  aboveskip=8pt,belowskip=8pt
+}
+\lstset{style=course}
+
+% ---------- Tables ----------
+\renewcommand{\arraystretch}{1.25}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\arrayrulecolor{rule}
+
+% ---------- TikZ styles ----------
+\tikzset{
+  box/.style={draw=ink,line width=0.6pt,rounded corners=2pt,fill=paper,align=center,
+    font=\sffamily\small,inner sep=5pt},
+  abox/.style={box,draw=accent,fill=accentsoft!55!paper},
+  soft/.style={box,draw=cardline,fill=card},
+  arr/.style={-{Stealth[length=5pt]},line width=0.7pt,color=ink},
+  aarr/.style={-{Stealth[length=5pt]},line width=0.9pt,color=accent},
+  lbl/.style={font=\sffamily\scriptsize,color=muted,align=center},
+}

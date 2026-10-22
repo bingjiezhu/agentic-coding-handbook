@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280" role="img" aria-labelledby="p_parallel-title p_parallel-desc">
+<title id="p_parallel-title">主智能体与两个只读子任务</title><desc id="p_parallel-desc">主智能体分别安排项目调查与资料核对，收回证据后统一判断并安排实现。</desc>
+<style>text{font-family:"Noto Sans CJK SC","PingFang SC",sans-serif}.number{font-family:"Menlo",monospace}</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7.5" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6Z" fill="#6E675F"/></marker><marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7.5" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6Z" fill="#B4532A"/></marker><marker id="arrow-link" markerWidth="8" markerHeight="6" refX="7.5" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6Z" fill="#6E675F"/></marker></defs>
+<rect width="1200" height="280" fill="#F3EDE3"/>
+<path data-edge="lead-a" d="M 280,112 L 336,112 Q 344,112 344,104 L 344,72 Q 344,64 352,64 L 456,64" fill="none" stroke="#6E675F" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path data-edge="lead-b" d="M 280,160 L 384,160 Q 392,160 392,168 L 392,200 Q 392,208 400,208 L 456,208" fill="none" stroke="#6E675F" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path data-edge="a-join" d="M 744,64 L 800,64 Q 808,64 808,72 L 808,104 Q 808,112 816,112 L 920,112" fill="none" stroke="#6E675F" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path data-edge="b-join" d="M 744,208 L 848,208 Q 856,208 856,200 L 856,168 Q 856,160 864,160 L 920,160" fill="none" stroke="#6E675F" stroke-width="2.2" marker-end="url(#arrow)"/>
+<g data-node-group="lead" data-x="24" data-y="80" data-w="256" data-h="112">
+<rect x="24" y="80" width="256" height="112" rx="6" fill="#E9D3C4" stroke="#B4532A" stroke-width="2"/>
+<text x="152" y="132" fill="#B4532A" font-size="28" font-weight="500" text-anchor="middle" class="" data-node="lead">主智能体</text>
+<text x="152" y="170" fill="#6E675F" font-size="24" font-weight="400" text-anchor="middle" class="" data-node="lead">统一要求·分配范围</text>
+</g>
+<g data-node-group="a" data-x="456" data-y="16" data-w="288" data-h="96">
+<rect x="456" y="16" width="288" height="96" rx="6" fill="#EAE2D5" stroke="#CBC1B2" stroke-width="1.5"/>
+<text x="600" y="60" fill="#1C1B19" font-size="28" font-weight="500" text-anchor="middle" class="" data-node="a">助手 A：查项目</text>
+<text x="600" y="98" fill="#6E675F" font-size="24" font-weight="400" text-anchor="middle" class="" data-node="a">可复用位置·限制</text>
+</g>
+<g data-node-group="b" data-x="456" data-y="160" data-w="288" data-h="96">
+<rect x="456" y="160" width="288" height="96" rx="6" fill="#F3EDE3" stroke="#CBC1B2" stroke-width="1.5"/>
+<text x="600" y="204" fill="#1C1B19" font-size="28" font-weight="500" text-anchor="middle" class="" data-node="b">助手 B：查资料</text>
+<text x="600" y="242" fill="#6E675F" font-size="24" font-weight="400" text-anchor="middle" class="" data-node="b">方案依据·风险</text>
+</g>
+<g data-node-group="join" data-x="920" data-y="80" data-w="256" data-h="112">
+<rect x="920" y="80" width="256" height="112" rx="6" fill="#F3EDE3" stroke="#1C1B19" stroke-width="1.5"/>
+<text x="1048" y="132" fill="#1C1B19" font-size="28" font-weight="500" text-anchor="middle" class="" data-node="join">主智能体汇总</text>
+<text x="1048" y="170" fill="#6E675F" font-size="24" font-weight="400" text-anchor="middle" class="" data-node="join">核对结果·安排实现</text>
+</g>
+</svg>

@@ -1,0 +1,12 @@
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+  \node[anchor=north east,inner sep=0] at ($(current page.north east)+(0,-16mm)$)
+    {\includegraphics[width=.86\paperwidth]{assets/cover.png}};
+  \node[anchor=north west,align=left,text width=90mm,inner sep=0]
+    at ($(current page.north west)+(22mm,-50mm)$) {%
+      {\displayfontlatin\fontsize{34}{38}\selectfont Vibe\hspace{.25em}Coding}\\[2mm]
+      {\displayfont\fontsize{34}{40}\selectfont 实战}\\[8mm]
+      {\sffamily\large\color{muted}用提示词组织工作\\用证据判断结果}};
+\end{tikzpicture}
+\vfill
+{\sffamily\small\color{muted}朱炳杰\hfill 2026 年 10 月}

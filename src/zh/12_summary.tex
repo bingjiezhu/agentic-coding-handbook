@@ -1,0 +1,25 @@
+\clearpage\section*{十二章要点回顾}\label{summary}\markboth{总结}{}
+\lede{说清目标与取舍，用项目文件积累上下文，让每轮执行留下可验收的成果。}
+\vspace{3mm}
+\begingroup
+\renewcommand{\arraystretch}{1.12}
+\begin{tabularx}{\linewidth}{@{}L{8mm}L{42mm}Y@{}}
+\toprule 章 & 章节 & 核心思想与行动要点\\\midrule
+\textcolor{accent}{\textsf{01}} & 把想法变成\newline 可执行的任务 & \textbf{先定义结果与取舍。}与 AI 讨论后整理规格，人审核本版做与不做，把偏好转成可观察的标准。\\[5pt]
+\textcolor{accent}{\textsf{02}} & 项目文件\newline 怎样分工和衔接 & \textbf{用文件积累上下文。}索引指向需求、依据与进度；压缩或换会话后按需重读，确认 AI 实际读到。\\[5pt]
+\textcolor{accent}{\textsf{03}} & 先读懂项目，\newline 再决定怎么改 & \textbf{先调研再选架构。}比较复用、改造与自建，查权威来源、设计理由与适用边界，验证关键未知。\\[5pt]
+\textcolor{accent}{\textsf{04}} & 用 Spec Kit\newline 串起文件与执行 & \textbf{让需求贯穿执行。}按当前步骤维护规格、计划与任务。关键取舍先核对，文档勾选不等于完成。\\[5pt]
+\textcolor{accent}{\textsf{05}} & 小步实现，\newline 给出具体反馈 & \textbf{每轮可检查、可恢复。}保存基线、接通真实操作；反馈写清位置、现状、目标和保持不变的部分。\\[5pt]
+\textcolor{accent}{\textsf{06}} & 从实际使用\newline 判断是否完成 & \textbf{预期来自原始要求。}走完整操作并核对保存记录；分清通过、失败和未验证，不改松检查换取通过。\\[5pt]
+\textcolor{accent}{\textsf{07}} & 出错时，\newline 先定位再修改 & \textbf{把失败变成资产。}记录假设、条件、操作和结果；保留无效路径与排除理由，修复后留下回归检查。\\[5pt]
+\textcolor{accent}{\textsf{08}} & 多智能体：\newline 把独立工作拆开 & \textbf{独立工作再并行。}分清输入、范围与证据，由主会话核对并汇总；先少量试用，再按收益与成本扩量。\\[5pt]
+\textcolor{accent}{\textsf{09}} & 让另一名智能体\newline 独立审查 & \textbf{审查意见也要验证。}审查者直接读要求与当前版本，按触发条件和证据报告问题；修复后再复核。\\[5pt]
+\textcolor{accent}{\textsf{10}} & 长任务怎样\newline 可靠地接着做 & \textbf{按规格队列持续推进。}写清依赖、验收和停止条件，每阶段保存结果与失败路径，接续前核对状态。\\[5pt]
+\textcolor{accent}{\textsf{11}} & 把有效做法\newline 写成规则和技能 & \textbf{只保留反复有用的做法。}规则写约定，Skill 存方法，脚本执行固定步骤；实际调用，检查是否减少返工。\\[5pt]
+\textcolor{accent}{\textsf{12}} & 重复任务\newline 先小批试跑，再扩大 & \textbf{先验证流程，再扩大规模。}试跑常见与困难项，逐项记录状态；续做未完成项，重查受影响项，衡量总耗时与返工。\\[5pt]
+\bottomrule\end{tabularx}
+\endgroup\par
+\vspace{5mm}
+\textbf{贯穿十二章的主线：}人负责目标、判断与最终验收；AI 在明确范围内执行；文件保存需求、决定和经验，证据说明完成到了哪里。先把项目组织清楚，再增加自动化。
+\par\smallskip
+{\footnotesize\color{muted}方法与工具资料：\href{https://dora.dev/capabilities/working-in-small-batches/}{DORA 小批量工作}；\href{https://sre.google/sre-book/effective-troubleshooting/}{Google SRE 排错}；\href{https://docs.aws.amazon.com/prescriptive-guidance/latest/architectural-decision-records/adr-process.html}{AWS 架构决策记录}；\href{https://www.anthropic.com/research/effective-context-engineering-for-ai-agents}{Anthropic 上下文工程}；\href{https://learn.chatgpt.com/docs/agent-configuration/subagents}{OpenAI 子智能体}；\href{https://github.github.io/spec-kit/quickstart.html}{Spec Kit 官方流程}。方法按场景选用，工具行为以版本和配置为准。}

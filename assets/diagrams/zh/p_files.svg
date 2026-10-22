@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="408" viewBox="0 0 1200 408" role="img" aria-labelledby="p_files-title p_files-desc">
+<title id="p_files-title">项目文件的管理架构</title><desc id="p_files-desc">项目根目录下的规则与导航、按功能保存的决策文档，以及实现和结果分别承担不同职责。</desc>
+<style>text{font-family:"Noto Sans CJK SC","PingFang SC",sans-serif}.number{font-family:"Menlo",monospace}</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7.5" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6Z" fill="#6E675F"/></marker><marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7.5" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6Z" fill="#B4532A"/></marker><marker id="arrow-link" markerWidth="8" markerHeight="6" refX="7.5" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6Z" fill="#6E675F"/></marker></defs>
+<rect width="1200" height="408" fill="#F3EDE3"/>
+<path data-edge="root-entry" d="M 500,88 L 500,104 Q 500,112 492,112 L 212,112 Q 204,112 204,120 L 204,136" fill="none" stroke="#6E675F" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path data-edge="root-feature" d="M 600,88 L 600,136" fill="none" stroke="#6E675F" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path data-edge="root-work" d="M 700,88 L 700,104 Q 700,112 708,112 L 988,112 Q 996,112 996,120 L 996,136" fill="none" stroke="#6E675F" stroke-width="2.2" marker-end="url(#arrow)"/>
+<g data-node-group="root" data-x="460" data-y="8" data-w="280" data-h="80">
+<rect x="460" y="8" width="280" height="80" rx="6" fill="#E9D3C4" stroke="#B4532A" stroke-width="2"/>
+<text x="600" y="56" fill="#B4532A" font-size="28" font-weight="500" text-anchor="middle" class="" data-node="root">项目根目录</text>
+</g>
+<g data-node-group="entry" data-x="24" data-y="136" data-w="360" data-h="216">
+<rect x="24" y="136" width="360" height="216" rx="6" fill="#EAE2D5" stroke="#CBC1B2" stroke-width="1.5"/>
+<text x="204" y="180" fill="#1C1B19" font-size="28" font-weight="500" text-anchor="middle" class="" data-node="entry">项目入口</text>
+<text x="204" y="218" fill="#6E675F" font-size="24" font-weight="400" text-anchor="middle" class="" data-node="entry">AGENTS.md</text>
+</g>
+<g data-node-group="feature" data-x="420" data-y="136" data-w="360" data-h="216">
+<rect x="420" y="136" width="360" height="216" rx="6" fill="#F3EDE3" stroke="#CBC1B2" stroke-width="1.5"/>
+<text x="600" y="180" fill="#1C1B19" font-size="28" font-weight="500" text-anchor="middle" class="" data-node="feature">功能文档</text>
+<text x="600" y="218" fill="#6E675F" font-size="24" font-weight="400" text-anchor="middle" class="" data-node="feature">specs/功能目录/</text>
+</g>
+<g data-node-group="work" data-x="816" data-y="136" data-w="360" data-h="216">
+<rect x="816" y="136" width="360" height="216" rx="6" fill="#F3EDE3" stroke="#1C1B19" stroke-width="1.5"/>
+<text x="996" y="180" fill="#1C1B19" font-size="28" font-weight="500" text-anchor="middle" class="" data-node="work">实现与结果</text>
+<text x="996" y="218" fill="#6E675F" font-size="24" font-weight="400" text-anchor="middle" class="" data-node="work">src/ 代码 · tests/ 检查</text>
+</g>
+<text x="204" y="252" fill="#1C1B19" font-size="24" font-weight="400" text-anchor="middle" class="">README.md</text>
+<text x="204" y="286" fill="#1C1B19" font-size="24" font-weight="400" text-anchor="middle" class="">PROGRESS.md</text>
+<text x="204" y="320" fill="#1C1B19" font-size="24" font-weight="400" text-anchor="middle" class="">.specify/（原则与流程）</text>
+<text x="600" y="252" fill="#1C1B19" font-size="24" font-weight="400" text-anchor="middle" class="">spec.md · research.md</text>
+<text x="600" y="286" fill="#1C1B19" font-size="24" font-weight="400" text-anchor="middle" class="">plan.md · tasks.md</text>
+<text x="600" y="320" fill="#1C1B19" font-size="24" font-weight="400" text-anchor="middle" class="">需求检查 · 验证步骤</text>
+<text x="996" y="252" fill="#1C1B19" font-size="24" font-weight="400" text-anchor="middle" class="">生成结果与检查记录</text>
+<text x="996" y="286" fill="#1C1B19" font-size="24" font-weight="400" text-anchor="middle" class="">技能与可复用脚本</text>
+<text x="996" y="320" fill="#1C1B19" font-size="24" font-weight="400" text-anchor="middle" class="">沿用实际项目目录</text>
+<text x="600" y="386" fill="#6E675F" font-size="24" font-weight="400" text-anchor="middle" class="">文件名为常见组织方式；Spec Kit 沿用当前选定的功能目录</text>
+</svg>

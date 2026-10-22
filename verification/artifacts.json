@@ -1,0 +1,61 @@
+{
+  "release": "v1.0.0",
+  "published_date": "2026-10-22",
+  "artifacts": [
+    {
+      "language": "zh",
+      "file": "pdf/vibe-coding-in-practice-zh.pdf",
+      "sha256": "507974c42d1f7c3f561b86c9f22dc58875e7930ea3fed7c764725a96cf81623a",
+      "pages": 15
+    },
+    {
+      "language": "en",
+      "file": "pdf/vibe-coding-in-practice-en.pdf",
+      "sha256": "80bc16e9586e98d186a04fc7eb87978fc3820023424cb817b2dfb4315f662f15",
+      "pages": 15
+    }
+  ],
+  "sources": {
+    "src/en/00_cover.tex": "1a3ee3dd209247309c9f7a1128796df31cd2fe50962e842ee5647167c123e722",
+    "src/en/00_guide.tex": "7b0a54c51fc77d80fe2735228e785e6de96827bb8507ae34e2ee33bd2eac8c4b",
+    "src/en/01_goal.tex": "9c84625dd75c10453419f3f3afea7128751e79325bba2c9214670395639e1417",
+    "src/en/01_structure.tex": "ae338cf8dd4df7c3dddb34bcb61881a45e0db93407247bf85b3a136529d04a3e",
+    "src/en/02_project.tex": "26c6895a762e06c2714f2c6162169644f95f88bce507149f0efee069a4fd8eff",
+    "src/en/02_speckit.tex": "a5abf50ec34717445cf2ebc2f56b880ea43e005e4e1335a801a43ffc85c8e7ad",
+    "src/en/03_build.tex": "add990472b5ae995d7c395081bbcfae145a7a5daf2caf7c626d3e52b5e2b8711",
+    "src/en/04_check.tex": "d72f214a8f3011f94ad5bc6e36f1da33e24fd86d3f528f0cbb77a2808c0535c6",
+    "src/en/05_debug.tex": "44645931b6c2ac4851e091c2b973c8e71072e5569a7396ef0f2d53f2ef7a80e0",
+    "src/en/06_parallel.tex": "38c6adc8ef66bf4753ee3cc483265c12847d613a291f946e5eb276e27a3af701",
+    "src/en/07_review.tex": "8fd9b5083296830e1619fc413b59a6f1346af6736379bb83bad33793e4c21372",
+    "src/en/08_resume.tex": "a81c3949d51348aa9f563837f669e7758095467c4b6b6c2a2fba597fc90716ce",
+    "src/en/09_reuse.tex": "d1787c06de5edaa78fb8981d789f9217efc9c0c384b7da842ad7c87022d7bc69",
+    "src/en/10_batch.tex": "a643cda4eaebe18e4ca2262ee7187fef1fcf4f8a20a6f0700f90f758f76e5072",
+    "src/en/12_summary.tex": "20f0b4d524f27b854a0c6eec9b88417440b7ff928f58e70f183503f0d81c66ce",
+    "src/en/main.tex": "2c45b9bd4cfb31d9d0658525e700d789ca1dec833c087b65f59769e4db53843b",
+    "src/en/style.tex": "7b3387f19975b748dfdae6c82d2e21b12d50b9ffbd3ab49d6becc9a60204d0c2",
+    "src/shared/style.tex": "feb1a6e9b8b2c87211bfffa0d75650e55a7bff14c405575200904738fce9009f",
+    "src/zh/00_cover.tex": "4595539908a5291f06b34713683d2571304305867fade1d1d3985aaa0026bd3d",
+    "src/zh/00_guide.tex": "9f8d1123dea0a307bdc82b78f669068cfd0ad247e801b11794389224dd511a3a",
+    "src/zh/01_goal.tex": "74f0108f4e0c67f57af110f16ec8245bec66544e962dffeb91ef908dcd7ace5c",
+    "src/zh/01_structure.tex": "b3ce9a805f0a6969d23d8cd83f960050ff083dcae97d5ceab4335cddadad0b2c",
+    "src/zh/02_project.tex": "d8a7dbb511a6e8237da3d7a8eaf7116913ef098d060cc97655510176885a61d1",
+    "src/zh/02_speckit.tex": "36ab30f01d71b8a245d6dd335e9d9f144157677a75dda6e3ff5487cf0d0ac91f",
+    "src/zh/03_build.tex": "212d833094b0d3d250c675e69f4d24542524e7f4b1aea1d4e6697c79cbfcc4e2",
+    "src/zh/04_check.tex": "d4ab646088fae95697930273582919e8ae50cb5d695dc1b6e5397f453e00e6e1",
+    "src/zh/05_debug.tex": "55a08889951637519acb1632d0742902eba59fda7d058dfae300784e768a0625",
+    "src/zh/06_parallel.tex": "5b30c699a0da3993a2b4f7bc8c008002c0107de9053a818b976640dd53a9ec53",
+    "src/zh/07_review.tex": "2f1a295b9386b9f0453fb3f36348cd9fa21e4a2c6b7eed776ffb3935b91eff05",
+    "src/zh/08_resume.tex": "6095d24af549e5eb6f83c4a6eec1accbbf2eb62000b8b4c5daec596db5894d0f",
+    "src/zh/09_reuse.tex": "e5e3361f6d53df07e2e07a10378226c7db1f0f360d5775984d3a6d2cf3d87db1",
+    "src/zh/10_batch.tex": "8336d87fbaf238aca1f965560f777e66af5a91dbda6e1444c643da6ff5aa539e",
+    "src/zh/12_summary.tex": "bfe2c515fbf7eb15f66eaef69e38e3efcb46b568ac405931a7206c17f509cce8",
+    "src/zh/main.tex": "d8881c8262e402b43c7999e1dda2e665cb506f2beddc66055cd395a7bf8a62b0",
+    "src/zh/style.tex": "a076902445bcfe04091fa4c1ef74f0d8c1c5b69df4afa1741b7cc83ad1dc508e",
+    "scripts/build.py": "80129ede3b63752ed27389d27c15c6efa736255a56b6aa4f16e9d3dc2fc2c746",
+    "scripts/export_markdown.py": "4257a3e0b7298c6df656964bee8d551ef0c5dba2e544ca0749ff97dd8ac06597",
+    "scripts/publish_artifacts.py": "11a1043dfb7ba9c0440887967bfb9a2276f45168166c928a5ffab3019de00740",
+    "scripts/render_diagrams.cjs": "d7949ba0a3e30382dfd23b890fb92c7f25d1976d9d7acdda1704447640488f89",
+    "scripts/translate_diagrams.py": "0adb20bcdf5f6279d3d700e40d5b044604adee26a4c8f3394b6d6394b1a54db1",
+    "scripts/verify.py": "a9a7a3ca3c9523ab791b56ad34e3ca75600418b1629bfcfd2bc2c192d3b73c04"
+  }
+}

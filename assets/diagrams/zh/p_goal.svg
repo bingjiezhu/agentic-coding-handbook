@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="244" viewBox="0 0 1200 244" role="img" aria-labelledby="p_goal-title p_goal-desc">
+<title id="p_goal-title">需求与最小方案</title><desc id="p_goal-desc">需求与最小方案：目标、边界、完成标准、最小方案。</desc>
+<style>text{font-family:"Noto Sans CJK SC","PingFang SC",sans-serif}.number{font-family:"Menlo",monospace}</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7.5" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6Z" fill="#6E675F"/></marker><marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7.5" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6Z" fill="#B4532A"/></marker><marker id="arrow-link" markerWidth="8" markerHeight="6" refX="7.5" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6Z" fill="#6E675F"/></marker></defs>
+<rect width="1200" height="244" fill="#F3EDE3"/>
+<path data-edge="n0-n1" d="M 288,100 L 320,100" fill="none" stroke="#6E675F" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path data-edge="n1-n2" d="M 584,100 L 616,100" fill="none" stroke="#6E675F" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path data-edge="n2-n3" d="M 880,100 L 912,100" fill="none" stroke="#6E675F" stroke-width="2.2" marker-end="url(#arrow)"/>
+<g data-node-group="n0" data-x="24" data-y="48" data-w="264" data-h="104">
+<rect x="24" y="48" width="264" height="104" rx="6" fill="#EAE2D5" stroke="#CBC1B2" stroke-width="1.5"/>
+<text x="156" y="96" fill="#1C1B19" font-size="28" font-weight="500" text-anchor="middle" class="" data-node="n0">目标</text>
+<text x="156" y="134" fill="#6E675F" font-size="24" font-weight="400" text-anchor="middle" class="" data-node="n0">为谁解决什么</text>
+<text x="36" y="33" fill="#6E675F" font-size="24" font-weight="400" text-anchor="start" class="number">01</text>
+</g>
+<g data-node-group="n1" data-x="320" data-y="48" data-w="264" data-h="104">
+<rect x="320" y="48" width="264" height="104" rx="6" fill="#F3EDE3" stroke="#CBC1B2" stroke-width="1.5"/>
+<text x="452" y="96" fill="#1C1B19" font-size="28" font-weight="500" text-anchor="middle" class="" data-node="n1">边界</text>
+<text x="452" y="134" fill="#6E675F" font-size="24" font-weight="400" text-anchor="middle" class="" data-node="n1">本版做与不做</text>
+<text x="332" y="33" fill="#6E675F" font-size="24" font-weight="400" text-anchor="start" class="number">02</text>
+</g>
+<g data-node-group="n2" data-x="616" data-y="48" data-w="264" data-h="104">
+<rect x="616" y="48" width="264" height="104" rx="6" fill="#E9D3C4" stroke="#B4532A" stroke-width="2"/>
+<text x="748" y="96" fill="#B4532A" font-size="28" font-weight="500" text-anchor="middle" class="" data-node="n2">完成标准</text>
+<text x="748" y="134" fill="#6E675F" font-size="24" font-weight="400" text-anchor="middle" class="" data-node="n2">怎样判断做对</text>
+<text x="628" y="33" fill="#6E675F" font-size="24" font-weight="400" text-anchor="start" class="number">03</text>
+</g>
+<g data-node-group="n3" data-x="912" data-y="48" data-w="264" data-h="104">
+<rect x="912" y="48" width="264" height="104" rx="6" fill="#F3EDE3" stroke="#1C1B19" stroke-width="1.5"/>
+<text x="1044" y="96" fill="#1C1B19" font-size="28" font-weight="500" text-anchor="middle" class="" data-node="n3">最小方案</text>
+<text x="1044" y="134" fill="#6E675F" font-size="24" font-weight="400" text-anchor="middle" class="" data-node="n3">可检查的小任务</text>
+<text x="924" y="33" fill="#6E675F" font-size="24" font-weight="400" text-anchor="start" class="number">04</text>
+</g>
+<text x="600" y="222" fill="#6E675F" font-size="24" font-weight="400" text-anchor="middle" class="">先明确重要选择，再安排实现</text>
+</svg>

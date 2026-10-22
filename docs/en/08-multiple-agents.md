@@ -1,0 +1,27 @@
+[English](../en/08-multiple-agents.md) · [简体中文](../zh/08-multiple-agents.md) · [Home](../../README.md)
+
+# Split Independent Work Across Agents
+
+![Split Independent Work Across Agents](../../assets/diagrams/en/p_parallel.svg)
+
+Multiple agents can collaborate. This chapter uses a lead agent to assign and synthesize work: the main session owns the goal, while subagents handle bounded tasks. Each can read extensive material and return conclusions with evidence pointers, reducing clutter in the main session. Parallelize independent research first; coordinate tightly coupled edits.
+
+## Start with two read-only assistants
+
+1. **Request real subagents in the main session.** Confirm support and inspect task records. “Read-only” instructions are not access controls. Codex subagents inherit the parent session's permissions; a role description cannot restrict them independently. Enforced read-only work requires appropriate parent settings or a separate environment.
+
+1. **Give them different tasks.** One investigates existing code and reuse; the other checks alternatives, sources or validation risks. Specify goals, inputs, scope and outputs for each. Do not assume they know the chat history or have read project rules.
+
+1. **Let the lead agent reconcile results.** Wait for evidence before dependent edits. For parallel coding, agree on file ownership, interfaces and acceptance criteria. Git worktrees separate working directories, not permissions or shared databases. Assign shared files an owner, configure test environments separately and check after integration.
+
+### Create Parallel Subtasks
+
+```text
+Goal: [task]. Shared materials: [requirements, research, plan and task locations]. Check capabilities and permissions first. If supported, create two read-only subtasks: A checks existing implementation and reuse; B checks [approach, sources or validation risks]. Report missing materials.
+
+Subtasks must not edit files or expand scope. If enforced read-only access is required but cannot be configured, pause before launching and explain. Role instructions are not permission isolation. Give each a scope, inputs, checks and return format: findings, locations, evidence and unknowns. The lead agent may advance independent work within current permissions; wait for dependent results and reconcile conflicts first.
+
+Before any parallel editing, establish authorization, file ownership and integration checks. Record running, completed or failed status; no returned result is not completion. If subagents are unsupported, provide task briefs for separate sessions without pretending they launched.
+```
+
+Separate contexts help research, but do not replace project records or guarantee lossless handoffs. Confirm tasks actually started, recover sources and resolve disagreements. Begin small; compare total time, usage and rework before scaling. More agents may increase duplication and coordination cost. Without subagent tools, research in separate chats and consolidate the results.

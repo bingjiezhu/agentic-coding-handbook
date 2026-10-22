@@ -1,0 +1,25 @@
+{
+  "release": "v1.0.0",
+  "review_date": "2026-10-22",
+  "source_edition": "v35-usage-only-final-20261021",
+  "chinese_text_preserved": true,
+  "chinese_pdf_characters_and_positions_match_source_edition": true,
+  "english_chapters": 12,
+  "prompts_per_language": 13,
+  "translated_diagrams": 13,
+  "terminology_review": "Reviewed chapter by chapter against the Chinese source; technical terms and constraints retained.",
+  "independent_human_translation_review": false,
+  "cross_model_prompt_benchmark": false,
+  "visual_review": {
+    "pages_per_language": 15,
+    "all_pages_reviewed_in_contact_sheets": true,
+    "english_full_page_checks": [
+      4,
+      10,
+      12,
+      13,
+      14
+    ],
+    "findings": []
+  }
+}
