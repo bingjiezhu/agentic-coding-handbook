@@ -66,11 +66,11 @@ https://github.com/bingjiezhu/agentic-coding-handbook/tree/main/skills/project-g
 
 | 版本 | 在线阅读 | 提示词 | PDF 下载 |
 | --- | --- | --- | --- |
-| 简体中文 | [阅读目录](docs/zh/README.md) | [13 条示例](prompts/zh.md) | [中文 PDF](https://github.com/bingjiezhu/agentic-coding-handbook/releases/download/v1.0.0/vibe-coding-in-practice-zh.pdf) |
-| English | [Reading guide](docs/en/README.md) | [13 examples](prompts/en.md) | [English PDF](https://github.com/bingjiezhu/agentic-coding-handbook/releases/download/v1.0.0/vibe-coding-in-practice-en.pdf) |
+| 简体中文 | [阅读目录](docs/zh/README.md) | [13 条示例](prompts/zh.md) | [中文 PDF](https://github.com/bingjiezhu/agentic-coding-handbook/releases/download/v1.2.0/vibe-coding-in-practice-zh.pdf) |
+| English | [Reading guide](docs/en/README.md) | [13 examples](prompts/en.md) | [English PDF](https://github.com/bingjiezhu/agentic-coding-handbook/releases/download/v1.2.0/vibe-coding-in-practice-en.pdf) |
 
-当前主分支保留项目引导入口、技能、教程和 SVG 图。PDF 与原 LaTeX 出版源码在[教程发布页](https://github.com/bingjiezhu/agentic-coding-handbook/releases/tag/v1.0.0)下载；使用这个方法不需要本地的排版中间文件和编辑核查记录。
+[版本下载页](https://github.com/bingjiezhu/agentic-coding-handbook/releases/tag/v1.2.0)提供可安装技能、中英文 PDF 和 LaTeX 源码包。仓库包含项目流程、参考章节、提示词示例与 SVG 图。
 
-[资料来源](REFERENCES.md) · [翻译说明](TRANSLATION.md) · [参与改进](CONTRIBUTING.md) · [维护说明](DEVELOPMENT.md)
+[资料来源](REFERENCES.md) · [术语对照](TERMINOLOGY.md) · [参与改进](CONTRIBUTING.md) · [维护说明](DEVELOPMENT.md)
 
 作者：**[朱炳杰 · Bingjie Zhu](https://github.com/bingjiezhu)**。引导方法、教程、翻译和提示词采用 **[CC BY 4.0](LICENSE)**，辅助代码采用 [MIT](LICENSE-CODE)。分享与改编请注明作者、附授权链接并说明修改。第三方工具遵循各自授权。

@@ -6,6 +6,6 @@ When maintaining this repository:
 
 - The reusable instructions are in `skills/project-guide/`; keep them self-contained when installed separately.
 - `docs/zh/` and `docs/en/` are the bilingual reading edition. Update corresponding meaning when changing it.
-- Main keeps reusable text, the Skill, SVG figures and lightweight validation. PDFs, LaTeX publication sources, rendering duplicates and authoring checks belong in release downloads or local archives.
+- Maintain reusable instructions, the Skill, bilingual chapters and SVG figures in the repository. Distribute PDFs and LaTeX source packages through releases; exclude build outputs, temporary projects and logs.
 - Validate with `python3 scripts/validate_repo.py` and `python3 -m unittest discover -s tests -v`.
 - Do not promise that sharing a URL installs software, changes permissions or guarantees automatic execution in every host. Distinguish a real tool invocation from showing a chat command.

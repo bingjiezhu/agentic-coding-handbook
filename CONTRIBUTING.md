@@ -1,15 +1,19 @@
-# Contributing · 参与改进
+# Contributing · 参与贡献
 
-Help make the project guide useful in actual work. Reports about confusing questions, wrong stage selection, failed Spec Kit integration or inaccurate translations are welcome. Include the language, task, tool/version, relevant file, what actually happened and the smallest useful reproduction. Exclude secrets and private project data.
+Contributions may improve project guidance, tool integration, teaching material, translations or code. Issues and pull requests are welcome in Chinese or English.
 
-欢迎反馈引导问题不清楚、下一步判断不对、Spec Kit 接入失败或翻译不准确。请写明语言、任务、工具与版本、具体文件、实际结果和可复现步骤，不上传密钥或私密数据。
+欢迎通过 Issue 或 Pull Request 改进项目引导、工具接入、教程、翻译与代码，支持中文和英文交流。
 
-## Making a change
+## Reporting an issue
 
-1. For agent behavior, edit `START.md` or the self-contained `skills/project-guide/` package. For teaching material, edit corresponding files in `docs/zh/`, `docs/en/` and `prompts/`.
-2. Preserve existing user goals and project conventions. Use a full Spec Kit workflow when useful, not for every tiny edit. Avoid adding repeated warnings or turning one example into a universal rule.
-3. Use current official sources for integration and command claims. Distinguish a step invoked through the host from displaying its command or running CLI setup.
-4. Follow [DEVELOPMENT.md](DEVELOPMENT.md) and run the relevant checks. Use temporary projects outside the real application for setup tests.
-5. Keep changes focused. Do not commit local validation logs, temporary app files or duplicate PDF/image rendering assets.
+Include the relevant file or chapter, expected behavior, actual behavior, tool version and reproduction steps. Remove credentials and private project data from examples and logs.
 
-Issues and pull requests can be in Chinese or English. Explain what behavior changed and what was actually tested; no need to invent a success rate.
+反馈问题时，请提供具体文件或章节、预期与实际表现、工具版本和复现步骤，并移除密钥与私密数据。
+
+## Submitting a change
+
+1. Edit `START.md` or `skills/project-guide/` for project-guidance behavior. Edit corresponding files under `docs/zh/`, `docs/en/` and `prompts/` for teaching material.
+2. Preserve existing user goals and project conventions. Keep workflows proportional to the task.
+3. Use official sources for tool-specific instructions and verify the actual invocation method.
+4. Run the relevant checks in [DEVELOPMENT.md](DEVELOPMENT.md), using separate test projects for integration changes.
+5. Describe the purpose, behavior and test coverage of the change. Include only files relevant to the contribution.

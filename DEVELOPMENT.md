@@ -1,31 +1,44 @@
-# Development · 维护说明
+# Development · 开发与维护
 
-The main branch is the reusable guide, Skill and reading edition. Keep it small enough for people and agents to navigate. The `v1.0.0` release preserves the original bilingual PDFs and LaTeX publication snapshot; PDF rendering is not part of using the Project Guide.
+## Repository structure
 
-## Files to maintain
+| Path | Purpose |
+| --- | --- |
+| `START.md` | Project-guide entry point |
+| `skills/project-guide/` | Self-contained, installable Skill |
+| `docs/zh/`, `docs/en/` | Chinese and English reference chapters |
+| `prompts/` | Copyable prompt collections |
+| `assets/diagrams/` | SVG illustrations used by the chapters |
+| `scripts/`, `tests/` | Repository validation and helper tests |
 
-- `START.md`: what an agent should do when a user shares the repository.
-- `skills/project-guide/SKILL.md`: the installable, self-contained project workflow.
-- `skills/project-guide/references/`: conditional Spec Kit routing and progress guidance.
-- `skills/project-guide/scripts/inspect_project.py`: read-only project inventory; no installation or project-code execution. Invocation flags that use unsupported or ambiguous YAML are reported as unknown; inspect them with the host rather than assuming they are enabled.
-- `docs/zh/`, `docs/en/`, `prompts/`: the reading edition, edited in corresponding languages.
-- `assets/diagrams/`: SVGs used in the reading edition; avoid committing rendering duplicates.
+The project inspector reads project structure and declared invocation settings without executing project code. Unsupported or ambiguous flag syntax is reported as unknown and must be checked with the host.
 
-Do not add authoring logs, temporary projects, PDF build directories or repeated image formats to main. Use a local archive or an appropriate release asset for publication sources.
+## Development requirements
 
-## Checks
-
-Python 3.9+ is enough for the repository checks and helper tests:
+Python 3.9 or later is sufficient for the repository checks and inspector tests:
 
 ```sh
 python3 scripts/validate_repo.py
 python3 -m unittest discover -s tests -v
 ```
 
-For Skill frontmatter validation, the Codex Skill Creator's `quick_validate.py` can be used if available. The current Skill allows normal automatic discovery; do not switch it to explicit-only without a user request.
+Keep the Skill self-contained so that installing its folder does not require files from elsewhere in the repository. Skill discovery remains enabled by default.
 
-When changing Spec Kit routing, verify the current official integration and installed behavior. A useful isolated smoke test uses a reviewed `specify-cli` version to initialize separate temporary Codex and Claude projects, checks the actual generated skills, and runs the project inventory. Never run initialization against this guide repository to test it. Do not claim that CLI setup alone proves AI planning or implementation succeeded.
+## Documentation changes
 
-When changing an instruction, also walk through: an idea without a folder, an existing project, a planning request with Spec Kit, missing tools, a user-only skill, and resuming interrupted work. Report the distinction between text review, helper tests, real tool invocation and any actual model execution. Changes to the guide should not imply extra rights to install, publish or operate on production systems.
+Maintain corresponding meaning in both languages. Keep prompt collections consistent with the examples in each chapter. Preserve filenames, executable identifiers and command syntax. Add primary references when changing tool-specific instructions.
 
-当前主分支用于给读者和 AI 使用。修改入口或技能后检查链接、自包含性与项目检查脚本；PDF、LaTeX 排版和核查记录保留在发布包或本地，不放回日常使用入口。
+## Integration changes
+
+Use separate temporary projects for each supported host. Verify the generated Spec Kit skills, active feature selection and planning prerequisites. Cover new-project guidance, existing projects, missing tools, user-invocable-only skills and interrupted work. Setup tests and application acceptance tests serve different purposes; record their results separately.
+
+## Distribution
+
+[Release downloads](https://github.com/bingjiezhu/agentic-coding-handbook/releases/tag/v1.2.0) provide the Skill archive, bilingual PDFs and LaTeX source package. The source package contains its own compilation instructions. Exclude temporary applications, build outputs, logs and credentials from repository commits.
+
+## 中文维护要点
+
+- 保持中英文含义对应，章节示例与提示词合集一致。
+- 技能文件夹独立安装后应能使用，不依赖仓库其他文件。
+- 修改工具接入方式时，在独立测试项目中验证。
+- 发布技能包、PDF 和排版源码；临时项目、日志与构建产物不纳入仓库。

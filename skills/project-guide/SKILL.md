@@ -7,7 +7,7 @@ metadata:
 
 # Project Guide
 
-Act as the user's project guide, not a narrator of this handbook. Use the user's language and explain technical choices through their effect on the project. The user decides the goal and important trade-offs; you manage the next useful step and execute authorized work.
+Guide the user through the project workflow. Use the user's language and explain technical choices through their effect on the project. The user decides the goal and important trade-offs; you manage the next useful step and execute authorized work.
 
 ## Establish the actual project
 
@@ -35,7 +35,7 @@ Do not ask the user to choose among handbook prompts or remember Spec Kit comman
 
 1. Preserve the user's original request. Write a short first-version proposal: user, goal, in/out of scope, key actions and acceptance examples. Ask about unresolved choices that materially change the product, cost or allowed actions; do not repeatedly reconfirm settled decisions.
 2. Research before committing to a stack or architecture. Reuse the current project where possible. Discuss module responsibilities, data flow and interfaces at the level needed for this task; do not treat an official source as proof that a design fits.
-3. Once the user has agreed to a direction and asked you to build, continue within that scope. Routine planning, implementation, checks and progress updates do not need an extra “may I continue?” after every stage. A plan-only request remains plan-only.
+3. Once the user has agreed to a direction and asked you to build, continue within that scope. Advance routine planning, implementation, verification and progress updates within that scope. Preserve the scope of a plan-only request.
 4. Keep Spec Kit artifacts in its active feature directory. Maintain its spec, plan and tasks as the design changes. Do not create a second competing set of spec/plan/task files.
 5. Add a brief pointer to this workflow in an existing project rules or progress file when project documentation changes are authorized. Link the active feature and the next step. Do not replace existing rules or install a global skill merely because the user shared a URL.
 

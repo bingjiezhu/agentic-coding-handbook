@@ -1,36 +1,32 @@
-# Changelog · 更新记录
+# Changelog · 版本记录
+
+## v1.2.0 · 2026-10-22
+
+- Unified project, terminology and contributor documentation.
+- Distributed the Skill, bilingual handbook and LaTeX source as separate release packages.
+- Corrected the active-feature path in the Chinese Spec Kit chapter.
+
+统一项目说明、术语与贡献文档，提供独立的技能、双语手册和 LaTeX 源码下载，并修正中文章节中的功能目录路径。
 
 ## v1.1.1 · 2026-10-22
 
-Repository correctness fixes; handbook content and project workflow unchanged.
+- Corrected citation metadata and invocation-setting detection.
+- Expanded tests for commented, ambiguous and incomplete configuration.
 
-- Corrected CFF citation metadata: the repository is a software artifact, with a preferred manual citation for the handbook.
-- Project inventory now recognizes commented YAML booleans and reports ambiguous or unsupported invocation settings as unknown.
-- Added regression checks for these cases and the CFF root type.
-
-修正引用元数据与项目检查脚本的配置识别，补充回归检查；教程正文与项目引导流程保持原样。
+修正引用元数据和调用设置识别，扩展配置测试。
 
 ## v1.1.0 · 2026-10-22
 
-Project-guide entry point and reusable Skill.
+- Added the project-guide entry point and installable Skill.
+- Integrated stage-based Spec Kit routing and progress records.
+- Added a read-only project inspector.
 
-- START.md instructs an agent how to begin from the shared repository link.
-- Project Guide selects the next stage and routes substantial planning to the actual installed Spec Kit integration.
-- Added conditional setup/invocation instructions, progress handoffs and a read-only project inspector.
-- Simplified main to reusable guidance, bilingual reading material and SVG diagrams; publication PDFs and LaTeX sources remain in the v1.0.0 release.
-- Existing guide and project permissions remain authoritative. URL access, Skill loading and user-only invocation restrictions are reported explicitly.
-
-新增给 AI 的项目引导入口和可安装技能。根据项目阶段衔接需求、调研、Spec Kit 计划、实现、验收和续做；精简主分支，出版文件保留在教程发布页。
+提供项目引导入口、可安装技能、按阶段调用的 Spec Kit 流程、进度记录和只读项目检查工具。
 
 ## v1.0.0 · 2026-10-22
 
-First bilingual public edition of **Agentic Coding Handbook / Vibe Coding in Practice**.
+- Published the Chinese and English handbook: twelve chapters and thirteen prompt examples per language.
+- Included diagrams, primary references and LaTeX sources.
+- Licensed educational content under CC BY 4.0 and helper code under MIT.
 
-- English and Simplified Chinese PDFs, 15 pages each.
-- Twelve matching chapters, thirteen copyable prompts per language and translated diagrams.
-- GitHub reading pages generated from editable LaTeX sources.
-- Primary-source references, translation terminology, build instructions and artifact verification.
-- Chinese text preserved from the confirmed October 21 manuscript; English translated for this release.
-- Educational content under CC BY 4.0; build and export scripts under MIT.
-
-首个中英文公开版：两份15页PDF、十二章、每种语言十三条提示词，以及对应图表。提供GitHub在线阅读、LaTeX源码、资料来源、术语对照和构建检查。中文沿用已确认稿，英文按对应内容翻译。教程采用CC BY 4.0，构建与导出脚本采用MIT。
+发布中英文手册、图表、资料来源与 LaTeX 源码。每种语言包含十二章、十三条提示词示例；教程采用 CC BY 4.0，辅助代码采用 MIT。

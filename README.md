@@ -62,11 +62,11 @@ The accompanying handbook explains the reasoning behind the workflow. Both langu
 
 | Edition | Read on GitHub | Prompts | PDF download |
 | --- | --- | --- | --- |
-| English | [Reading guide](docs/en/README.md) | [13 examples](prompts/en.md) | [English PDF](https://github.com/bingjiezhu/agentic-coding-handbook/releases/download/v1.0.0/vibe-coding-in-practice-en.pdf) |
-| 简体中文 | [阅读目录](docs/zh/README.md) | [13 条示例](prompts/zh.md) | [中文 PDF](https://github.com/bingjiezhu/agentic-coding-handbook/releases/download/v1.0.0/vibe-coding-in-practice-zh.pdf) |
+| English | [Reading guide](docs/en/README.md) | [13 examples](prompts/en.md) | [English PDF](https://github.com/bingjiezhu/agentic-coding-handbook/releases/download/v1.2.0/vibe-coding-in-practice-en.pdf) |
+| 简体中文 | [阅读目录](docs/zh/README.md) | [13 条示例](prompts/zh.md) | [中文 PDF](https://github.com/bingjiezhu/agentic-coding-handbook/releases/download/v1.2.0/vibe-coding-in-practice-zh.pdf) |
 
-The main branch keeps the guide, skill, reading material and SVG diagrams. Publication PDFs and the original LaTeX publication sources are available through the [handbook release](https://github.com/bingjiezhu/agentic-coding-handbook/releases/tag/v1.0.0). Local build products and authoring records are not needed to use the workflow.
+The [release downloads](https://github.com/bingjiezhu/agentic-coding-handbook/releases/tag/v1.2.0) include the installable Skill, both PDFs and the LaTeX source package. The repository contains the project workflow, reference chapters, prompt examples and SVG diagrams.
 
-[References](REFERENCES.md) · [Translation notes](TRANSLATION.md) · [Contributing](CONTRIBUTING.md) · [Development](DEVELOPMENT.md)
+[References](REFERENCES.md) · [Terminology](TERMINOLOGY.md) · [Contributing](CONTRIBUTING.md) · [Development](DEVELOPMENT.md)
 
 By **[Bingjie Zhu · 朱炳杰](https://github.com/bingjiezhu)**. Guide, handbook, translations and prompts: **[CC BY 4.0](LICENSE)**. Helper code: [MIT](LICENSE-CODE). Credit the author, link the license and indicate changes. Linked third-party tools retain their own licenses.

@@ -22,13 +22,13 @@ The optional `../scripts/inspect_project.py` inventories these files without exe
 
 **Not installed:** explain that Spec Kit adds workflow files to the project. If local setup is already authorized, inspect the official installation instructions and initialize the selected target. If that scope is not yet authorized, ask once about adding the local integration; keep researching in the meantime. No global installation is required for a one-time setup.
 
-Official one-time CLI pattern, run in the terminal only after checking the current release and options:
+Example terminal command for initializing a new project:
 
 ```sh
-uvx --from specify-cli==<reviewed-version> specify init <new-project-path> --integration codex --script py --non-interactive
+uvx --from specify-cli==1.2.2 specify init my-project --integration codex --script py --non-interactive
 ```
 
-Replace the version with an actual reviewed version; choose `claude` for Claude Code or the documented integration for another host. If Python or `uvx` is missing, give the supported setup action rather than pretending initialization ran. Prefer an existing supported tool over adding another installation.
+The example pins version 1.2.2. Select a release compatible with the target integration; use `claude` for Claude Code or the documented integration for another host. If Python or `uvx` is missing, give the supported setup action rather than pretending initialization ran. Prefer an existing supported tool over adding another installation.
 
 For a nonempty application directory, first preserve local work, inspect managed-file conflicts and follow the official existing-project guide. The `--here --force` form can replace conflicting managed files: never use it blindly or as a default retry. Do not overwrite existing user instructions to make setup pass.
 
@@ -61,7 +61,7 @@ An existing `plan.md` or checked task box is not evidence that its content is co
 
 ## Official references
 
-Reviewed on 2026-10-22; verify installed behavior before setup.
+Use the documentation matching the installed integration and version.
 
 - [Spec Kit quickstart](https://github.github.io/spec-kit/quickstart.html)
 - [Codex integration](https://github.com/github/spec-kit/blob/main/docs/integrations/codex.md)

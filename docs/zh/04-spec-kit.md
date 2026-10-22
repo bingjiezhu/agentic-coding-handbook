@@ -20,7 +20,7 @@ Spec 是需求规格；[Spec Kit](https://github.com/github/spec-kit) 是组织�
 
 `plan` 还生成 `data-model.md`（数据组织）、`quickstart.md`（验证步骤）；有对外接口时生成 `contracts/`（接口约定），供实现与验收使用。
 
-当前默认技能入口：Codex 用 `$speckit-specify`；Claude Code、Copilot 用 `/speckit-specify`。当前功能由 `.specify/“feature.json` 或运行设置指定，切换 Git 分支不会自动切换它。
+当前默认技能入口：Codex 用 `$speckit-specify`；Claude Code、Copilot 用 `/speckit-specify`。当前功能由 `.specify/feature.json` 或运行设置指定，切换 Git 分支不会自动切换它。
 
 ### 按 Spec Kit 推进当前功能
 
