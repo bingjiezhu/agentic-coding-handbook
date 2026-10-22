@@ -1,5 +1,15 @@
 # Changelog · 版本记录
 
+## v1.3.0 · 2026-10-22
+
+- Added integration installation guidance for existing Spec Kit projects.
+- Clarified specification and constitution prerequisites for planning.
+- Added task-scoped baseline checks and pre-existing failure records.
+- Updated the pinned setup example to Spec Kit 1.2.3.
+- Enforced chapter/prompt collection consistency in repository validation.
+
+完善已有项目接入与计划前置条件，增加任务范围内的改动前检查和既有故障记录；安装示例采用 Spec Kit 1.2.3，仓库检查自动核对章节与提示词合集。
+
 ## v1.2.0 · 2026-10-22
 
 - Unified project, terminology and contributor documentation.

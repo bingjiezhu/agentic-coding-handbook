@@ -7,6 +7,7 @@ The following primary sources support the handbook's engineering methods and too
 | Practice / topic | Primary source | Scope |
 | --- | --- | --- |
 | Small changes and feedback | [DORA: Working in small batches](https://dora.dev/capabilities/working-in-small-batches/) | Small increments, feedback and diagnosis |
+| Executable verification | [Claude Code: Best practices](https://code.claude.com/docs/en/best-practices) | Runnable checks, visible evidence and task-scoped verification |
 | Evidence-based debugging | [Google SRE: Effective Troubleshooting](https://sre.google/sre-book/effective-troubleshooting/) | Hypotheses, observed behavior and searchable investigation records |
 | Architecture decisions | [AWS: ADR process](https://docs.aws.amazon.com/prescriptive-guidance/latest/architectural-decision-records/adr-process.html) | Alternatives, context, rationale and consequences |
 | Context and retrieval | [Anthropic: Effective context engineering](https://www.anthropic.com/research/effective-context-engineering-for-ai-agents) | Indexes, just-in-time retrieval and persistent notes |

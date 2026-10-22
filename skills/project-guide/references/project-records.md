@@ -17,7 +17,7 @@ Avoid inventing credentials, infrastructure, deadlines or product requirements. 
 
 ## After each meaningful increment
 
-Use the existing progress file or a small `PROGRESS.md`. Record goal and active feature, changed files and version, actual checks and evidence, failed attempts and unknowns, unfinished tasks and the next useful action. Link long logs rather than putting them in always-loaded rules. Never include secrets.
+Use the existing progress file or a small `PROGRESS.md`. Record goal and active feature, changed files and version, exact run/check commands and their results, pre-existing failures, failed attempts and unknowns, unfinished tasks and the next useful action. Link long logs rather than putting them in always-loaded rules. Never include secrets.
 
 For a failed experiment, preserve the question, hypothesis, version and conditions, action, observed result, evidence and why the approach was abandoned. Old failure records inform the next diagnosis; they do not prove an approach can never work under different conditions.
 

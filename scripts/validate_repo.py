@@ -3,6 +3,15 @@ from pathlib import Path
 import json,re
 ROOT=Path(__file__).resolve().parents[1]
 
+def check_prompt_consistency(root,lang):
+    """Keep copyable prompts identical to the corresponding chapter examples."""
+    chapter_cards=[]
+    for path in sorted((root/f'docs/{lang}').glob('*.md')):
+        if re.match(r'\d{2}-',path.name):
+            chapter_cards+=re.findall(r'```text\n(.*?)\n```',path.read_text(),re.S)
+    collection=re.findall(r'```text\n(.*?)\n```',(root/f'prompts/{lang}.md').read_text(),re.S)
+    assert chapter_cards==collection,(lang,'Chapter prompts differ from the copyable collection')
+
 def validate():
     required=['README.md','README.zh-CN.md','START.md','AGENTS.md','skills/project-guide/SKILL.md','skills/project-guide/agents/openai.yaml','skills/project-guide/references/spec-kit.md','skills/project-guide/references/project-records.md','skills/project-guide/scripts/inspect_project.py','LICENSE','LICENSE-CODE']
     for name in required:assert (ROOT/name).is_file(),name
@@ -28,6 +37,7 @@ def validate():
         cards=re.findall(r'```text\n(.*?)\n```',(ROOT/f'prompts/{lang}.md').read_text(),re.S)
         assert len(cards)==13,(lang,len(cards))
         assert all(c.count('[')==c.count(']') for c in cards),lang
+        check_prompt_consistency(ROOT,lang)
     for folder in ['src','verification','pdf']:
         assert not (ROOT/folder).exists(),f'Keep publication files in release assets, not main: {folder}'
     assert not [p for p in (ROOT/'assets').rglob('*') if p.is_file() and p.suffix!='.svg']

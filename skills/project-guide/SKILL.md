@@ -41,6 +41,8 @@ Do not ask the user to choose among handbook prompts or remember Spec Kit comman
 
 ## Work and report concretely
 
+Before editing an existing application, run the smallest relevant existing check or smoke test when authorized and feasible. Record pre-existing failures separately from failures introduced by the change. Scope the baseline check to the affected workflow; a small documentation edit does not require starting the full application.
+
 Complete one real path from user action through processing and persistence to visible feedback. For UI work, use the user's examples to clarify the intended experience, then click, type, refresh and check saved data when tools permit. Preserve approved behavior rather than rewriting everything in response to each comment.
 
 Use test data and preserve unrelated work. Instructions such as “read-only” are not enforced permissions. A method guide grants no extra right to publish, send messages, change production data or install system-wide tools; use the user's actual authorization.

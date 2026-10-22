@@ -26,7 +26,7 @@ Keep the Skill self-contained so that installing its folder does not require fil
 
 ## Documentation changes
 
-Maintain corresponding meaning in both languages. Keep prompt collections consistent with the examples in each chapter. Preserve filenames, executable identifiers and command syntax. Add primary references when changing tool-specific instructions.
+Maintain corresponding meaning in both languages. Keep prompt collections consistent with the examples in each chapter. Repository validation compares every prompt body in chapter order and rejects divergent or reordered collections. Preserve filenames, executable identifiers and command syntax. Add primary references when changing tool-specific instructions.
 
 ## Integration changes
 
