@@ -9,6 +9,10 @@ def validate():
     skill=ROOT/'skills/project-guide';text=(skill/'SKILL.md').read_text()
     assert text.startswith('---\n') and re.search(r'^name: project-guide$',text,re.M)
     assert re.search(r'^description: .+',text,re.M) and '[TODO' not in text
+    # CFF's root type is software/dataset; manual belongs in preferred-citation.
+    citation=(ROOT/'CITATION.cff').read_text()
+    root_types=re.findall(r'^type:\s*(\S+)\s*$',citation,re.M)
+    assert len(root_types)==1 and root_types[0] in ('software','dataset'),'Invalid CFF root type'
     links=0
     for path in [*ROOT.glob('*.md'),*ROOT.glob('docs/**/*.md'),*ROOT.glob('prompts/*.md'),*skill.rglob('*.md')]:
         content=re.sub(r'```.*?```','',path.read_text(),flags=re.S)

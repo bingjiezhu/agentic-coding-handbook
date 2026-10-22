@@ -7,7 +7,7 @@ The main branch is the reusable guide, Skill and reading edition. Keep it small 
 - `START.md`: what an agent should do when a user shares the repository.
 - `skills/project-guide/SKILL.md`: the installable, self-contained project workflow.
 - `skills/project-guide/references/`: conditional Spec Kit routing and progress guidance.
-- `skills/project-guide/scripts/inspect_project.py`: read-only project inventory; no installation or project-code execution.
+- `skills/project-guide/scripts/inspect_project.py`: read-only project inventory; no installation or project-code execution. Invocation flags that use unsupported or ambiguous YAML are reported as unknown; inspect them with the host rather than assuming they are enabled.
 - `docs/zh/`, `docs/en/`, `prompts/`: the reading edition, edited in corresponding languages.
 - `assets/diagrams/`: SVGs used in the reading edition; avoid committing rendering duplicates.
 

@@ -23,4 +23,22 @@ class InspectionTests(unittest.TestCase):
   self.write('.specify/feature.json',json.dumps({'feature_directory':'specs/old'}));self.write('specs/new/plan.md','# Plan')
   self.write('.agents/skills/speckit-plan/SKILL.md','---\nname: speckit-plan\ndescription: Plan\n---\n# Plan');self.write('.agents/skills/speckit-plan/agents/openai.yaml','policy:\n  allow_implicit_invocation: false\n')
   r=m.inspect(self.root,'specs/new');self.assertEqual(r['active_feature'],'specs/new');self.assertEqual(r['feature_files_present'],['plan.md']);self.assertTrue(r['installed_steps'][0]['implicit_invocation_disabled'])
+ def test_yaml_comments_do_not_hide_invocation_restrictions(self):
+  self.write('.claude/skills/speckit-plan/SKILL.md','---\nname: speckit-plan\ndescription: Plan\ndisable-model-invocation: true # user only\n---\n')
+  self.write('.agents/skills/speckit-plan/SKILL.md','---\nname: speckit-plan\ndescription: Plan\n---\n')
+  self.write('.agents/skills/speckit-plan/agents/openai.yaml','interface:\n  display_name: Plan\npolicy:\n  allow_implicit_invocation: false # explicit only\n')
+  steps={x['host']:x for x in m.inspect(self.root)['installed_steps']}
+  self.assertTrue(steps['claude']['user_invocation_only']);self.assertTrue(steps['codex']['implicit_invocation_disabled'])
+ def test_ambiguous_or_unsupported_flags_are_unknown(self):
+  self.write('.claude/skills/speckit-plan/SKILL.md','---\nname: speckit-plan\ndescription: Plan\ndisable-model-invocation: true\ndisable-model-invocation: false\n---\n')
+  self.write('.agents/skills/speckit-plan/SKILL.md','---\nname: speckit-plan\ndescription: Plan\n---\n')
+  self.write('.agents/skills/speckit-plan/agents/openai.yaml','policy: {allow_implicit_invocation: false}\n')
+  r=m.inspect(self.root);steps={x['host']:x for x in r['installed_steps']}
+  self.assertIsNone(steps['claude']['user_invocation_only']);self.assertIsNone(steps['codex']['implicit_invocation_disabled']);self.assertTrue(any('Unknown' in n for n in r['notes']))
+ def test_unclosed_frontmatter_is_unknown_instead_of_enabled(self):
+  self.write('.claude/skills/speckit-plan/SKILL.md','---\nname: speckit-plan\ndescription: Plan\n')
+  r=m.inspect(self.root);self.assertIsNone(r['installed_steps'][0]['user_invocation_only']);self.assertTrue(any('frontmatter' in n for n in r['notes']))
+ def test_indented_separator_in_description_does_not_end_frontmatter(self):
+  self.write('.claude/skills/speckit-plan/SKILL.md','---\nname: speckit-plan\ndescription: |\n  Plan a feature.\n  ---\n  Additional description.\ndisable-model-invocation: true\n---\n')
+  self.assertTrue(m.inspect(self.root)['installed_steps'][0]['user_invocation_only'])
 if __name__=='__main__':unittest.main()

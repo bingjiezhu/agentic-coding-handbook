@@ -2,7 +2,7 @@
 # Copyright (c) 2026 Bingjie Zhu
 """Read-only inventory for the Project Guide. Does not execute project code."""
 from pathlib import Path
-import argparse,json,os,re,shutil,subprocess
+import argparse,json,os,re,shutil
 
 STEPS=('constitution','specify','clarify','plan','checklist','tasks','analyze','implement','converge')
 
@@ -11,6 +11,42 @@ def inside(root,path):
     except (OSError,RuntimeError):return False
 
 def exists_inside(root,path):return inside(root,path) and path.is_file()
+
+def frontmatter(text):
+    """Return a complete frontmatter block, or unknown for a malformed header."""
+    lines=text.splitlines()
+    if not lines or lines[0].rstrip()!='---':return None
+    for end in range(1,len(lines)):
+        if lines[end].rstrip()=='---':return lines[1:end]
+    return None
+
+def declared_boolean(lines,key,nested=False,default=False):
+    """Recognize plain YAML booleans with comments; do not guess other syntax."""
+    if lines is None:return None
+    matches=[]
+    for line in lines:
+        match=re.match(r'^(\s*)'+re.escape(key)+r':\s*(.*)$',line)
+        if match and bool(match[1])==nested:matches.append(match[2].split('#',1)[0].strip().lower())
+    if not matches:
+        return None if any(key in line.split('#',1)[0] for line in lines) else default
+    if len(matches)!=1 or matches[0] not in ('true','false'):return None
+    return matches[0]=='true'
+
+def implicit_invocation_disabled(text):
+    """Inspect the policy block only; unsupported/ambiguous YAML stays unknown."""
+    lines=text.splitlines()
+    starts=[i for i,line in enumerate(lines) if re.match(r'^policy\s*:',line)]
+    if not starts:return False
+    if len(starts)!=1:return None
+    start=starts[0]
+    if lines[start].split(':',1)[1].split('#',1)[0].strip():return None
+    end=start+1
+    while end<len(lines):
+        line=lines[end]
+        if line.strip() and not line.lstrip().startswith('#') and not line[0].isspace():break
+        end+=1
+    allowed=declared_boolean(lines[start+1:end],'allow_implicit_invocation',nested=True,default=True)
+    return None if allowed is None else not allowed
 
 def inspect(root,feature_override=None):
     root=Path(root).expanduser().resolve()
@@ -40,10 +76,13 @@ def inspect(root,feature_override=None):
             path=root/folder/('speckit-'+step)/'SKILL.md'
             if not exists_inside(root,path):continue
             try:
-                text=path.read_text(encoding='utf-8');front=text.split('---',2)[1] if text.startswith('---') else ''
-                user_only=bool(re.search(r'^disable-model-invocation:\s*true\s*$',front,re.M))
+                text=path.read_text(encoding='utf-8');header=frontmatter(text)
+                user_only=declared_boolean(header,'disable-model-invocation')
                 config=path.parent/'agents/openai.yaml'
-                implicit_disabled=exists_inside(root,config) and bool(re.search(r'^\s*allow_implicit_invocation:\s*false\s*$',config.read_text(encoding='utf-8'),re.M))
+                implicit_disabled=implicit_invocation_disabled(config.read_text(encoding='utf-8')) if exists_inside(root,config) else False
+                if header is None:result['notes'].append('Unknown invocation restriction: incomplete frontmatter in '+str(path.relative_to(root)))
+                elif user_only is None:result['notes'].append('Unknown user invocation restriction in '+str(path.relative_to(root))+'; inspect with the host.')
+                if implicit_disabled is None:result['notes'].append('Unknown implicit invocation restriction in '+str(config.relative_to(root))+'; inspect with the host.')
                 result['installed_steps'].append({'host':host,'step':step,'path':path.relative_to(root).as_posix(),'user_invocation_only':user_only,'implicit_invocation_disabled':implicit_disabled,'session_loading':'not observable from files'})
             except (OSError,UnicodeError) as error:result['notes'].append('Cannot read '+str(path.relative_to(root))+': '+str(error))
     result['notes'].append('File presence does not establish artifact quality, completed work or callable skill availability. Inspect content and host capabilities before selecting a stage.')

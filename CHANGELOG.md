@@ -1,5 +1,15 @@
 # Changelog · 更新记录
 
+## v1.1.1 · 2026-10-22
+
+Repository correctness fixes; handbook content and project workflow unchanged.
+
+- Corrected CFF citation metadata: the repository is a software artifact, with a preferred manual citation for the handbook.
+- Project inventory now recognizes commented YAML booleans and reports ambiguous or unsupported invocation settings as unknown.
+- Added regression checks for these cases and the CFF root type.
+
+修正引用元数据与项目检查脚本的配置识别，补充回归检查；教程正文与项目引导流程保持原样。
+
 ## v1.1.0 · 2026-10-22
 
 Project-guide entry point and reusable Skill.
