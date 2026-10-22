@@ -20,6 +20,7 @@ def validate():
     assert re.search(r'^description: .+',text,re.M) and '[TODO' not in text
     # CFF's root type is software/dataset; manual belongs in preferred-citation.
     citation=(ROOT/'CITATION.cff').read_text()
+    assert re.search(r'^cff-version: 1\.2\.0$',citation,re.M),'CFF schema version is independent of the release version'
     root_types=re.findall(r'^type:\s*(\S+)\s*$',citation,re.M)
     assert len(root_types)==1 and root_types[0] in ('software','dataset'),'Invalid CFF root type'
     links=0
