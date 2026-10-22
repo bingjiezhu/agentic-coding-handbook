@@ -1,6 +1,6 @@
 # Translation Notes · 翻译说明
 
-The English edition translates the confirmed Chinese manuscript, **v35-usage-only-final-20261021**. Chapter order, thirteen prompt cards, file names, commands, diagram relationships and qualifications are aligned. English sentences are edited for natural technical prose rather than literal word order. The Chinese manuscript is preserved, apart from relocated asset paths in the publication source.
+The English edition translates the confirmed Chinese manuscript, **v35-usage-only-final-20261021**. Chapter order, thirteen prompt cards, file names, commands, diagram relationships and qualifications are aligned. English sentences are edited for natural technical prose rather than literal word order. The original Chinese publication is preserved in the v1.0.0 release; the reading edition remains in docs/zh/.
 
 英文以确认后的中文定稿为底本，章节、十三张提示词、文件名、命令及图表关系一一对应。翻译保留原文的条件和限制，并按英语技术写作习惯调整句式。发布目录只调整资源路径，不重写中文内容。
 
@@ -22,4 +22,10 @@ The English edition translates the confirmed Chinese manuscript, **v35-usage-onl
 | 未验证 | unverified | A check that has not established the claim, not a pass |
 | 判断力 / taste | judgment / taste | Understanding users and setting priorities; a definition used in this guide |
 
-Verification covers chapter and prompt counts, matching diagram usage, preserved placeholders, copyable prompt bodies, English text completeness, local links, source/PDF fingerprints and visual layout. It does not constitute an independent human translation review, a learner comprehension study or a cross-model task-success benchmark. Improvements are welcome through Issues.
+The v1.0.0 publication verification covered chapter and prompt counts, matching diagram usage, preserved placeholders, copyable prompt bodies, English text completeness, local links, source/PDF fingerprints and visual layout. It does not constitute an independent human translation review, a learner comprehension study or a cross-model task-success benchmark. Improvements are welcome through Issues.
+
+## Project Guide · 项目引导
+
+The reusable Skill is written in English for portable agent consumption and directs the agent to respond in the user's language. START.md, both repository READMEs and the Skill cover the same project method; handbook chapters are references loaded as needed. The agent workflow was added in v1.1.0. It is not a second translation of the teaching manuscript.
+
+项目引导技能使用英语编写，要求 AI 按用户语言沟通。首页有中英文说明，教程按需查阅；不要求每次把两种语言全部装进上下文。

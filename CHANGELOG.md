@@ -1,5 +1,17 @@
 # Changelog · 更新记录
 
+## v1.1.0 · 2026-10-22
+
+Project-guide entry point and reusable Skill.
+
+- START.md instructs an agent how to begin from the shared repository link.
+- Project Guide selects the next stage and routes substantial planning to the actual installed Spec Kit integration.
+- Added conditional setup/invocation instructions, progress handoffs and a read-only project inspector.
+- Simplified main to reusable guidance, bilingual reading material and SVG diagrams; publication PDFs and LaTeX sources remain in the v1.0.0 release.
+- Existing guide and project permissions remain authoritative. URL access, Skill loading and user-only invocation restrictions are reported explicitly.
+
+新增给 AI 的项目引导入口和可安装技能。根据项目阶段衔接需求、调研、Spec Kit 计划、实现、验收和续做；精简主分支，出版文件保留在教程发布页。
+
 ## v1.0.0 · 2026-10-22
 
 First bilingual public edition of **Agentic Coding Handbook / Vibe Coding in Practice**.
