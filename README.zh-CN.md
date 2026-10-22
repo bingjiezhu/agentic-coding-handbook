@@ -35,7 +35,7 @@ https://github.com/bingjiezhu/agentic-coding-handbook
 | 需要写计划 | 检查项目里的 Spec Kit，调用对应步骤整理需求、调研、计划和任务 |
 | 开始实现 | 先做通一段完整操作，保留可恢复版本和尝试记录 |
 | 检查结果 | 对照原始要求实际运行，说明通过、失败和还没测的部分 |
-| 下次继续 | 读取进度、核对当前文件，再接着做未完成的任务 |
+| 下次继续 | 读取进度和相关调查记录，核对当前文件与依据，再接着做未完成的任务 |
 
 你确认目标和重要取舍后，AI 在已允许的范围内继续做，不需要每一步都让你手动选提示词。明确的小改动也不必为了走流程而搭一整套工具。
 
@@ -66,10 +66,10 @@ https://github.com/bingjiezhu/agentic-coding-handbook/tree/main/skills/project-g
 
 | 版本 | 在线阅读 | 提示词 | PDF 下载 |
 | --- | --- | --- | --- |
-| 简体中文 | [阅读目录](docs/zh/README.md) | [13 条示例](prompts/zh.md) | [中文 PDF](https://github.com/bingjiezhu/agentic-coding-handbook/releases/download/v1.2.0/vibe-coding-in-practice-zh.pdf) |
-| English | [Reading guide](docs/en/README.md) | [13 examples](prompts/en.md) | [English PDF](https://github.com/bingjiezhu/agentic-coding-handbook/releases/download/v1.2.0/vibe-coding-in-practice-en.pdf) |
+| 简体中文 | [阅读目录](docs/zh/README.md) | [13 条示例](prompts/zh.md) | [中文 PDF](https://github.com/bingjiezhu/agentic-coding-handbook/releases/download/v1.4.0/vibe-coding-in-practice-zh.pdf) |
+| English | [Reading guide](docs/en/README.md) | [13 examples](prompts/en.md) | [English PDF](https://github.com/bingjiezhu/agentic-coding-handbook/releases/download/v1.4.0/vibe-coding-in-practice-en.pdf) |
 
-[版本下载页](https://github.com/bingjiezhu/agentic-coding-handbook/releases/tag/v1.2.0)提供可安装技能、中英文 PDF 和 LaTeX 源码包。仓库包含项目流程、参考章节、提示词示例与 SVG 图。
+[版本下载页](https://github.com/bingjiezhu/agentic-coding-handbook/releases/tag/v1.4.0)提供可安装技能、中英文 PDF 和 LaTeX 源码包。仓库包含项目流程、参考章节、提示词示例与 SVG 图。
 
 [资料来源](REFERENCES.md) · [术语对照](TERMINOLOGY.md) · [参与改进](CONTRIBUTING.md) · [维护说明](DEVELOPMENT.md)
 

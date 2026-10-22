@@ -117,7 +117,7 @@ Return a list for the implementer. Hand it off only with authorization and tools
 ```text
 Update [progress file]: goals and decisions, project path and version, changed files and uncommitted edits, checks and evidence, failures and unverified items, unfinished work, recovery and next steps. If unable to write, return saveable text without claiming it is on disk.
 
-Index key experiments with hypotheses, conditions, actions, results, abandoned approaches and reasons, and evidence links. Mark replaced decisions; preserve original requirements and evidence. Do not label plans completed. List each spec's status, dependencies and conditions to recheck. Mark missing history unknown rather than inventing it.
+Index key experiments with assumptions, conditions, results and evidence. Keep reviewable analysis and permitted original sources for important investigations; open saved files before handoff, and do not present a draft as saved. Mark superseded decisions, preserve requirements and evidence, and list spec status and next checks. Mark missing history unknown; do not call plans complete.
 ```
 
 ## 11 · Read Progress and Continue

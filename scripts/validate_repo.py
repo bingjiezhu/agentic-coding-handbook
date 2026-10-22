@@ -13,7 +13,7 @@ def check_prompt_consistency(root,lang):
     assert chapter_cards==collection,(lang,'Chapter prompts differ from the copyable collection')
 
 def validate():
-    required=['README.md','README.zh-CN.md','START.md','AGENTS.md','skills/project-guide/SKILL.md','skills/project-guide/agents/openai.yaml','skills/project-guide/references/spec-kit.md','skills/project-guide/references/project-records.md','skills/project-guide/scripts/inspect_project.py','LICENSE','LICENSE-CODE']
+    required=['README.md','README.zh-CN.md','START.md','AGENTS.md','skills/project-guide/SKILL.md','skills/project-guide/agents/openai.yaml','skills/project-guide/references/spec-kit.md','skills/project-guide/references/project-records.md','skills/project-guide/scripts/inspect_project.py','skills/project-guide/scripts/handoff_packet.py','LICENSE','LICENSE-CODE']
     for name in required:assert (ROOT/name).is_file(),name
     skill=ROOT/'skills/project-guide';text=(skill/'SKILL.md').read_text()
     assert text.startswith('---\n') and re.search(r'^name: project-guide$',text,re.M)

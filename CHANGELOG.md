@@ -1,5 +1,13 @@
 # Changelog · 版本记录
 
+## v1.4.0 · 2026-10-22
+
+- Added an optional local handoff packet for reviewable investigation results and selected source files.
+- Documented how to verify saved records and recheck their assumptions in later tasks.
+- Updated the bilingual handbook and PDF source with the same handoff guidance.
+
+增加可选的本地调查交接包，保存可审阅分析及明确选取的依据文件；完善记录落盘与后续复核说明，并同步中英文教程和 PDF 排版源码。
+
 ## v1.3.0 · 2026-10-22
 
 - Added integration installation guidance for existing Spec Kit projects.

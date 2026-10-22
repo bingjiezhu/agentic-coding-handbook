@@ -6,6 +6,14 @@
 
 Long tasks need clear specs, staged acceptance and persistent records. Review a dependency-ordered queue of specs before execution. Save before interruptions, usage limits or repeated drift; verify the current state before resuming.
 
+## Keep analysis that another session can check
+
+After substantial research, calculation or debugging, retain the question, key assumptions, necessary reasoning or experiments, sources, conclusion and unresolved parts. Reuse the project's existing research file; add a short index only when several records need navigation. A minor edit needs no separate record. This captures the AI's reviewable explanation, not undisclosed internal reasoning.
+
+For example, a temporary partner contract may specify the units of a retry delay. If a later task will implement that behavior, preserve the conversion, applicable host and request method, and an authorized copy of the contract or a durable source link. “We thought it meant milliseconds” alone gives the next agent nothing to verify. On the later task, read the relevant record and check it against the current contract and code; revalidate when the conditions change.
+
+Before handoff, open the saved file and check its contents and source. The optional [local handoff packet helper](../../skills/project-guide/scripts/handoff_packet.py) creates an index and SHA-256 manifest for selected files so missing or changed files can be detected; a matching hash does not establish that a conclusion is true. Packets go into the project's Git-ignored `.agent-handoff/` directory by default and may contain private material. Review them separately before sharing. If file tools are unavailable, return a Markdown draft clearly marked as unsaved and explain how to save it manually.
+
 ## Save before stopping; verify before resuming
 
 `PROGRESS.md` is a text progress file; reuse an existing equivalent. Use the first prompt before ending a session and the second after restarting.
@@ -15,7 +23,7 @@ Long tasks need clear specs, staged acceptance and persistent records. Review a 
 ```text
 Update [progress file]: goals and decisions, project path and version, changed files and uncommitted edits, checks and evidence, failures and unverified items, unfinished work, recovery and next steps. If unable to write, return saveable text without claiming it is on disk.
 
-Index key experiments with hypotheses, conditions, actions, results, abandoned approaches and reasons, and evidence links. Mark replaced decisions; preserve original requirements and evidence. Do not label plans completed. List each spec's status, dependencies and conditions to recheck. Mark missing history unknown rather than inventing it.
+Index key experiments with assumptions, conditions, results and evidence. Keep reviewable analysis and permitted original sources for important investigations; open saved files before handoff, and do not present a draft as saved. Mark superseded decisions, preserve requirements and evidence, and list spec status and next checks. Mark missing history unknown; do not call plans complete.
 ```
 
 Update records after each verifiable stage. On resuming, reread the current spec, progress and relevant experiments. A chat claim of completion does not replace a traceable result.

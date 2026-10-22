@@ -27,6 +27,7 @@ Guide the user through the project workflow. Use the user's language and explain
 | Something fails | Reproduce the issue; record a hypothesis and the smallest discriminating experiment before changing code | A bounded fix, retained failed attempts and a regression check where useful |
 | Important work is ready for acceptance | Check the real workflow against the original requirements; use a separate reviewer where available and appropriate | Pass, fail and unverified items with concrete evidence |
 | Session is ending or work will resume | Follow [Project records](references/project-records.md); compare saved progress with current files before resuming | A trustworthy next action, not just a chat summary |
+| A substantial investigation may inform a later task | Save its visible analysis and accessible evidence using [Project records](references/project-records.md); verify the saved files before handoff | A reviewable finding that another session can check |
 | Repetition is becoming useful | Capture effective rules or Skills; pilot batch work before scaling | A reused method shown to help on another task |
 
 Do not ask the user to choose among handbook prompts or remember Spec Kit command names. Route by the actual task. A minor, well-defined change can use a short plan and existing checks; do not introduce Spec Kit scaffolding unless it is useful or explicitly requested. If the user explicitly requires Spec Kit, use it when supported and report a real blocker otherwise.
@@ -42,6 +43,8 @@ Do not ask the user to choose among handbook prompts or remember Spec Kit comman
 ## Work and report concretely
 
 Before editing an existing application, run the smallest relevant existing check or smoke test when authorized and feasible. Record pre-existing failures separately from failures introduced by the change. Scope the baseline check to the affected workflow; a small documentation edit does not require starting the full application.
+
+When related prior work may matter, read the project's existing research or record index and the few relevant entries. Recheck their assumptions against current files. After a substantial investigation, preserve the key reasoning visible in your answer; if its original evidence may become unavailable, keep an authorized local copy or a stable accessible source and verify the handoff. Skip this for minor edits. A reported save is not evidence of a file write; check the file itself.
 
 Complete one real path from user action through processing and persistence to visible feedback. For UI work, use the user's examples to clarify the intended experience, then click, type, refresh and check saved data when tools permit. Preserve approved behavior rather than rewriting everything in response to each comment.
 

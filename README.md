@@ -35,7 +35,7 @@ The guide starts from your goal and current project. You do not need to pick a p
 | Plan | Detects the actual Spec Kit integration and invokes the appropriate installed step |
 | Build | Completes a small real workflow, preserves accepted behavior and records failed experiments |
 | Verify | Checks actual use against the original requirements and reviews important results |
-| Continue | Saves progress, verifies current files after a restart and advances the next useful task |
+| Continue | Reads progress and relevant investigations, checks current files and evidence, then advances the next useful task |
 
 You choose the goal and important trade-offs. The agent manages the next step within the scope you authorize. Minor changes can follow a short plan without adding a full toolchain.
 
@@ -62,10 +62,10 @@ The accompanying handbook explains the reasoning behind the workflow. Both langu
 
 | Edition | Read on GitHub | Prompts | PDF download |
 | --- | --- | --- | --- |
-| English | [Reading guide](docs/en/README.md) | [13 examples](prompts/en.md) | [English PDF](https://github.com/bingjiezhu/agentic-coding-handbook/releases/download/v1.2.0/vibe-coding-in-practice-en.pdf) |
-| 简体中文 | [阅读目录](docs/zh/README.md) | [13 条示例](prompts/zh.md) | [中文 PDF](https://github.com/bingjiezhu/agentic-coding-handbook/releases/download/v1.2.0/vibe-coding-in-practice-zh.pdf) |
+| English | [Reading guide](docs/en/README.md) | [13 examples](prompts/en.md) | [English PDF](https://github.com/bingjiezhu/agentic-coding-handbook/releases/download/v1.4.0/vibe-coding-in-practice-en.pdf) |
+| 简体中文 | [阅读目录](docs/zh/README.md) | [13 条示例](prompts/zh.md) | [中文 PDF](https://github.com/bingjiezhu/agentic-coding-handbook/releases/download/v1.4.0/vibe-coding-in-practice-zh.pdf) |
 
-The [release downloads](https://github.com/bingjiezhu/agentic-coding-handbook/releases/tag/v1.2.0) include the installable Skill, both PDFs and the LaTeX source package. The repository contains the project workflow, reference chapters, prompt examples and SVG diagrams.
+The [release downloads](https://github.com/bingjiezhu/agentic-coding-handbook/releases/tag/v1.4.0) include the installable Skill, both PDFs and the LaTeX source package. The repository contains the project workflow, reference chapters, prompt examples and SVG diagrams.
 
 [References](REFERENCES.md) · [Terminology](TERMINOLOGY.md) · [Contributing](CONTRIBUTING.md) · [Development](DEVELOPMENT.md)
 
